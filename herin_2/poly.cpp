@@ -9,11 +9,11 @@ int a1=0,a2,b1,b2,avail;					//start&end of 1st,2nd and result;
 void attach(float coef, int expon);
 void padd( int a1, int a2, int b1, int b2);
 void pmin(int a1, int a2, int b1, int b2);
-void print(int strt, int end);				//´õÇÏ±â ÇÔ¼ö¿Í »©±â ÇÔ¼ö¿¡¼­ °ªÀ» Ãâ·ÂÇÒ¶§
+void print(int strt, int end);				//ë”í•˜ê¸° í•¨ìˆ˜ì™€ ë¹¼ê¸° í•¨ìˆ˜ì—ì„œ ê°’ì„ ì¶œë ¥í• ë•Œ
 
 void main(){
-	cout<<"nÂ÷,mÂ÷ ¿¬»ê(n+m<20)"<<endl;
-	cout<<"Ã¹ ¹øÂ° nÂ÷½Ä:";
+	cout<<"nì°¨,mì°¨ ì—°ì‚°(n+m<20)"<<endl;
+	cout<<"ì²« ë²ˆì§¸ nì°¨ì‹:";
 	int max=0;
 	cin>>max;
 	for(int i=0;(avail<20)&&(i<=max);i++){
@@ -22,7 +22,7 @@ void main(){
 	}
 	a2=avail-1;
 	
-	cout<<"µÎ ¹øÂ° nÂ÷½Ä:"; 
+	cout<<"ë‘ ë²ˆì§¸ nì°¨ì‹:"; 
 	b1=avail;
 	cin>>max;
 	for(int i=0;(avail<20)&&(i<=max);i++){
@@ -36,7 +36,7 @@ void main(){
 	pmin(a1,a2,b1,b2);
 }
 void padd( int a1, int a2, int b1, int b2){
-	float temp;		//±¸Á¶Ã¼¿¡¼­ °ªÀ» °¡Á®¿À¸é ºÒ¾ÈÇØ¼­ ´Ù¸¥ °ªÀÌ µé¾î°¡¹Ç·Î temp¸¦ »ç¿ëÇØ¾ß ÇÔ
+	float temp;		//êµ¬ì¡°ì²´ì—ì„œ ê°’ì„ ê°€ì ¸ì˜¤ë©´ ë¶ˆì•ˆí•´ì„œ ë‹¤ë¥¸ ê°’ì´ ë“¤ì–´ê°€ë¯€ë¡œ tempë¥¼ ì‚¬ìš©í•´ì•¼ í•¨
 	while(a1<=a2&&b1<=b2){
 		if(db[a1].expon>db[b1].expon){
 			temp=db[a1].coef;				
@@ -55,7 +55,7 @@ void padd( int a1, int a2, int b1, int b2){
 	}
 	for(;a1<=a2;a1++)attach(db[a1].coef,db[a1++].expon);
 	for(;b1<=b2;b1++)attach(db[b1].coef,db[b1++].expon);
-	cout<<"µ¡¼À:	";
+	cout<<"ë§ì…ˆ:	";
 	print(b2+1, avail);
 }
 void attach(float coef, int expon){
@@ -82,7 +82,7 @@ void pmin(int a1, int a2, int b1, int b2){
 	}
 	for(;a1<=a2;a1++)attach(db[a1].coef,db[a1++].expon);
 	for(;b1<=b2;b1++)attach(db[b1].coef,db[b1++].expon);
-	cout<<"»¬¼À:	";
+	cout<<"ëº„ì…ˆ:	";
 	print(b2+1, avail);
 }
 void print(int strt, int end){
