@@ -14,12 +14,12 @@ void main(){
 	int num[]={40,30,50,10,80,20};
 	ds.key=50, ds.end = sizeof(num)/4;
 	ds.select(num,ds.end);
-	cout<<"Ãâ·Â"<<endl;
+	cout<<"ÃƒÃ¢Â·Ã‚"<<endl;
 	for(int i=0;i<ds.end;i++)
 		cout<<" "<<num[i];
 	cout<<endl;
-	cout<<"ÀÎµ¦½º : "<<ds.binary(ds.key ,num,0,ds.end-1)<<endl;
-	cout<<"ÀÎµ¦½º : "<<ds.rbin(ds.key,num,0,ds.end-1)<<endl;
+	cout<<"Ã€ÃŽÂµÂ¦Â½Âº : "<<ds.binary(ds.key ,num,0,ds.end-1)<<endl;
+	cout<<"Ã€ÃŽÂµÂ¦Â½Âº : "<<ds.rbin(ds.key,num,0,ds.end-1)<<endl;
 	ds.perm(num,0,4);
 }
 void DS1::select(int n[],int s){
