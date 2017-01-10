@@ -27,11 +27,11 @@ int main() {
 	int k;
 	BS bs;
 
-	cout<<"Ű �Է�(1~10): ";
+	cout<<"Å° ÀÔ·Â(1~10): ";
 	cin>>k;
 
 	int result = bs.search(list, k, list[0], list[9]);
-	cout<<"Ű�� �ε����� "<<result<<endl;
+	cout<<"Å°ÀÇ ÀÎµ¦½º´Â "<<result<<endl;
 	
 	return 0;
 }
