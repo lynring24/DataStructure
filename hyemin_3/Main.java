@@ -80,10 +80,9 @@ public class Main {
 			
 		}while(select!=0);
 		
+		
 		System.out.println("\n-------<Maze Problem>--------");
 		MazeProblem mazePrb = new MazeProblem();
-		
-		
 		mazePrb.path();
 	}
 
