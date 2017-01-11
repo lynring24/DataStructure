@@ -26,13 +26,12 @@ class CircularQueue extends Queue{
 			return ;
 		}
 		
-		else{
-			front = (front+1)%QUEUE_SIZE;
-			System.out.println(queueItem[front].value+"을(를) 제거했습니다");
+		
+		front = (front+1)%QUEUE_SIZE;
+		System.out.println(queueItem[front].value+"을(를) 제거했습니다");
 			
-			System.out.println("front = "+front);
-			System.out.println("rear = "+rear);
-		}
+		System.out.println("front = "+front);
+		System.out.println("rear = "+rear);
 	}
 	
 	void reset(){
