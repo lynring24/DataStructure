@@ -40,7 +40,7 @@
 
 >####Thu
 -  	Linked Polynomial
-- 	Delete list& Circular list& Recycle list
+- 	Circular list& Recycle list
 -  	Doubly linked list
 
 ###4주차(1/24, 1/26)
