@@ -2,10 +2,8 @@
 #include <stdlib.h>
 #define IS_FULL(rear) (!(rear))
 
-//not complete....;(
-//why? 노드에 이어서 삽입하려고 하면 에러 남... 짜증... 왜 노드 앞에 삽입되는 건가..
-
-/*This code operates normally 
+/*
+This code operates normally
 only when each polynomial is aligned in descending order..
 */
 
@@ -24,7 +22,7 @@ int main() {
 	int count = 0;
 	int size = 0;
 	int i, coef, expon;
-	
+
 	poly_ptr poly1 = NULL;
 	poly_ptr poly2 = NULL;
 	poly_ptr rear = NULL;
@@ -37,11 +35,11 @@ int main() {
 		for (i = 0; i < size; i++) {
 			printf("%d 번째 항의 계수를 입력하십시오: ", i + 1);
 			scanf_s("%d", &coef);
-			printf("%d 번째 항의 승수를 입력하십시오(낮은 값부터 입력): ", i + 1);
+			printf("%d 번째 항의 승수를 입력하십시오(높은 값부터 입력): ", i + 1);
 			scanf_s("%d", &expon);
 
 			if (count == 0) attach(coef, expon, &poly1);
-			else if(count==1) attach(coef, expon, &poly2);
+			else if (count == 1) attach(coef, expon, &poly2);
 		}
 		count++;
 	}
@@ -63,17 +61,18 @@ int main() {
 void printp(poly_ptr poly) {
 	for (; poly; poly = poly->link) {
 		if (poly->link) {
-			if(poly->expon==0)	printf("%d + ", poly->coef);
-			else printf("%d x^ %d +	", poly->coef, poly->expon);
+			printf("%d x^ %d +	", poly->coef, poly->expon);
 		}
 		else {
-			printf("%d x^ %d ", poly->coef, poly->expon);
+			if (poly->expon == 0)	printf("%d", poly->coef);
+			else printf("%d x^ %d", poly->coef, poly->expon);
 		}
 	}
 	printf("\n");
 }
 
 void attach(int coefficient, int exponent, poly_ptr * ptr) {
+	poly_ptr rear = NULL;
 	poly_ptr temp = (poly_ptr)malloc(sizeof(struct poly_node));
 
 	if (IS_FULL(temp)) {
@@ -85,12 +84,14 @@ void attach(int coefficient, int exponent, poly_ptr * ptr) {
 	temp->expon = exponent;
 
 	if (*ptr) {
-		temp->link = *ptr;
-		*ptr = temp;
+		for (rear = *ptr; rear->link; rear = rear->link);
+
+		rear->link = temp;
+		temp->link = NULL;
 	}
 	else {
-		temp->link = NULL;
 		*ptr = temp;
+		temp->link = NULL;
 	}
 }
 
