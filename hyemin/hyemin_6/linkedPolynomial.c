@@ -60,12 +60,14 @@ int main() {
 
 void printp(poly_ptr poly) {
 	for (; poly; poly = poly->link) {
-		if (poly->link) {
-			printf("%d x^ %d +	", poly->coef, poly->expon);
-		}
-		else {
-			if (poly->expon == 0)	printf("%d", poly->coef);
-			else printf("%d x^ %d", poly->coef, poly->expon);
+		if (poly->coef != 0) {//계수가 0이라면 따로 출력하지 않음
+			if (poly->link) {//다음 노드가 있으면 + 출력
+				printf("%d x^ %d +	", poly->coef, poly->expon);
+			}
+			else {
+				if (poly->expon == 0)	printf("%d", poly->coef);
+				else printf("%d x^ %d", poly->coef, poly->expon);
+			}
 		}
 	}
 	printf("\n");
