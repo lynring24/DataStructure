@@ -15,16 +15,8 @@ class Postfix {
 		
 		for(char c: tokens){
 			switch(c){
-			case '0':
-			case '1':
-			case '2':
-			case '3':
-			case '4':
-			case '5':
-			case '6':
-			case '7':
-			case '8':
-			case '9':
+			case '0': case '1': case '2': case '3': case '4':
+			case '5': case '6': case '7': case '8': case '9':
 				value= value*10+(c-'0');//띄어쓰기를 사용하지 않은 상태에서 값이 들어오면 하나의 값으로 읽음
 				break;
 			case ' '://띄어쓰기가 들어오고, 저장된 값이 있으면 해당 값을 푸쉬
