@@ -1,0 +1,20 @@
+sorry for late.
+
+1. CircularQueue
+
+Line15: if(front == rear){ //equals when ==, then must be full
+Codes are ok. I just don't understand your annotation. If 'equals' and '=' have same meaning, does 'equals when ==' explain what? It will be a glad thing to listen your additional explanation.
+
+Line44: System.out.println("AuA¨ù:");
+Was it Korean what you want to print? Sadly, Github breaks Korean. I think you would be better using English in your 'println' line. Like your comment, it is very simple but good enough.
+
+2. MazeProblem
+
+Line33~39: maze[0]=new int[]{1,1,1,1,1,1,1};	
+	maze[1]=new int[]{1,0,1,0,1,0,1};
+	maze[2]=new int[]{1,0,0,0,0,1,1};	
+	maze[3]=new int[]{1,0,1,1,1,0,1};
+	maze[4]=new int[]{1,0,0,1,0,1,1};	
+	maze[5]=new int[]{1,1,0,0,0,0,1};
+	maze[6]=new int[]{1,1,1,1,1,1,1};
+I am just wondering. Can you design this program changes its components whenever it is executed?
