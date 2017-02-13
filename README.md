@@ -59,15 +59,11 @@
 -	AVL Tree
 
 >####Thu
--	Huffman coding tree
 -	Depth First search
 -	Breadth-First Search
 
 ###6주차(2/7, 2/9)	
 >####Tue
--	Kruskal’s method
--	Sollin’s method
--	Prim method
 -	Dijkstra’s algorithm
 
 >####Thu
