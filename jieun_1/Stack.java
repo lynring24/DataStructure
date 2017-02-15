@@ -1,4 +1,4 @@
-package jan1ÁÖ;
+package jan1ì£¼;
 import java.util.*;
 
 class Element {
@@ -47,14 +47,14 @@ public class Stack {
 		
 		StackFunctions f = new StackFunctions();
 		
-		System.out.print("³ÖÀ» ¾ÆÀÌÅÛÀÇ °³¼ö: ");
+		System.out.print("ë„£ì„ ì•„ì´í…œì˜ ê°œìˆ˜: ");
 		n = sc.nextInt();
-		System.out.print("¾ÆÀÌÅÛ Å° ÀÔ·Â: ");
+		System.out.print("ì•„ì´í…œ í‚¤ ì…ë ¥: ");
 		for (i=0; i<n; i++) {
 			key = sc.nextInt();
 			items[i].key = key;
 		}
-		System.out.print("¾ÆÀÌÅÛ °ª ÀÔ·Â: ");
+		System.out.print("ì•„ì´í…œ ê°’ ì…ë ¥: ");
 		for (i=0; i<n; i++) {
 			value = sc.nextInt();
 			items[i].value = value;
@@ -64,7 +64,7 @@ public class Stack {
 			f.push(items[i], stack);
 		}
 
-		System.out.print("½ºÅÃ °ª È®ÀÎ: ");
+		System.out.print("ìŠ¤íƒ ê°’ í™•ì¸: ");
 		for (i=0; i<n; i++) {
 			System.out.print(f.spop(stack).value+" ");
 		}

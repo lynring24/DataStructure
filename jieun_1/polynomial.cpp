@@ -56,24 +56,24 @@ void Polynomial::attach(float coeff, int expo) {
 int main () {
 	Polynomial p;
 	int i, an, bn;
-	cout<<"a(x)ÀÇ Ç×ÀÇ °³¼ö: ";
+	cout<<"a(x)ì˜ í•­ì˜ ê°œìˆ˜: ";
 	cin>>an;
-	cout<<"b(x)ÀÇ Ç×ÀÇ °³¼ö: ";
+	cout<<"b(x)ì˜ í•­ì˜ ê°œìˆ˜: ";
 	cin>>bn;
 
-	cout<<"a(x)ÀÇ °è¼ö: ";
+	cout<<"a(x)ì˜ ê³„ìˆ˜: ";
 	for (i=0; i<an; i++)
 		cin>>terms[i].coef;
 
-	cout<<"a(x)ÀÇ Â÷¼ö: ";
+	cout<<"a(x)ì˜ ì°¨ìˆ˜: ";
 	for (i=0; i<an; i++)
 		cin>>terms[i].exp;
 
-	cout<<"b(x)ÀÇ °è¼ö: ";
+	cout<<"b(x)ì˜ ê³„ìˆ˜: ";
 	for (i=an; i<an+bn; i++)
 		cin>>terms[i].coef;
 
-	cout<<"b(x)ÀÇ Â÷¼ö: ";
+	cout<<"b(x)ì˜ ì°¨ìˆ˜: ";
 	for (i=an; i<an+bn; i++)
 		cin>>terms[i].exp;
 
